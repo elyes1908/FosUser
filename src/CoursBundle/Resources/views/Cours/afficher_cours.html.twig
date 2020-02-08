@@ -1,0 +1,23 @@
+{% extends 'Back/back.html.twig' %}
+{% block body %}
+    <table class="table table-striped">
+        <tr align="center"  >
+            <td><b>ID</b></td>
+            <td><b>Libelle</b></td>
+            <td><b>Niveau</b></td>
+            <td><b>Modifier</b></td>
+            <td><b>Supprimer</b></td>
+
+        </tr>
+    {% for c in Cours %}
+<tr align=" center" >
+    <td>{{c.id}}</td>
+    <td>{{c.Libelle}}</td>
+    <td>{{c.Niveau}}</td>
+    <td><a href="{{ path('ModifierCours',{'id':c.id}) }}"><i class="fa fa-edit" style="color:#2e6da4 " ></i></a></td>
+    <td><a href="{{ path('SupprimerCours',{'id':c.id}) }}"><i class="fa fa-trash" style="color: #ff6c5f"></i></a></td>
+</tr>
+    {% endfor %}
+    </table>
+
+{% endblock %}

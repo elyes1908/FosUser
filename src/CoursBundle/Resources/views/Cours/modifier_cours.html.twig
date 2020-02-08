@@ -1,0 +1,22 @@
+{% extends 'Back/back.html.twig' %}
+{% block body %}
+    <table class="table table-striped">
+        {{ form_start(form) }}
+        <tr>
+
+            <td>{{ form_label(form.Libelle) }}</td>
+            <td>{{ form_widget(form.Libelle) }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.Niveau) }}</td>
+            <td>{{ form_widget(form.Niveau) }}</td>
+
+        </tr>
+        <tr>
+            <td></td>
+            <td>{{ form_widget(form.Modifier, { 'attr': {'class': 'btn btn-warning  '}} ) }}</td>
+
+            {{ form_end(form) }}
+    </table>
+
+{% endblock %}
