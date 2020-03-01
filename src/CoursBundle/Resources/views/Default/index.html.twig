@@ -1,7 +1,0 @@
-{% extends 'Back/back.html.twig' %}
-{% block body %}
-connected as {{ u.email }}
-    <a href="{{ path('fos_user_security_logout') }}">
-        {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
-    </a>
-{% endblock %}

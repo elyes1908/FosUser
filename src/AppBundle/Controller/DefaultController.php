@@ -9,13 +9,13 @@ use Symfony\Component\Routing\Annotation\Route;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/home")
      */
-    public function indexAction(Request $request)
-    {
-        // replace this example code with whatever you need
-        return $this->render('default/index.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
-        ]);
+    public function redirectAction(){
+        $authChecker=$this->container->get('security.token_storage')->getToken()->getUser();
+        if($authChecker->getRoles('ROLE_AGENT')){
+            return $this->render('@Cours/Default/index.html.twig');
+        }
+        return $this->render('@FOSUser/Security/login.html.twig',[]);
     }
 }

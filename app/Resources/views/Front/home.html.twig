@@ -25,11 +25,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!-- //Meta tag Keywords -->
 
     <!-- Custom-Files -->
-    <link href="{{ asset ('home/css/bootstrap.css')}}" rel='stylesheet' type='text/css' />
+    <link href="{{ asset('Front/css/bootstrap.css')}}" rel='stylesheet' type='text/css' />
     <!-- Bootstrap-CSS -->
-    <link href="{{ asset ('home/css/style.css')}}" rel='stylesheet' type='text/css' />
+    <link href="{{ asset('Front/css/style.css')}}" rel='stylesheet' type='text/css' />
     <!-- Style-CSS -->
-    <link href=""{{ asset ('home/css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href=""{{ asset('Front/css/font-awesome.min.css')}}" rel="stylesheet">
     <!-- Font-Awesome-Icons-CSS -->
     <!-- //Custom-Files -->
 
@@ -58,7 +58,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <ul class="menu">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="index.html">About</a></li>
-                        <li><a href="{{ path("administration_ajout")  }}">Ajout</a></li>
+                        <li><a href="">Ajout</a></li>
                         <li>
                             <!-- First Tier Drop Down -->
                             <label for="drop-2" class="toggle toogle-2">Pages <span class="fa fa-angle-down"
@@ -80,51 +80,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </ul>
                 </nav>
             </div>
+
             <!-- //nav -->
         </div>
+
     </div>
 </header>
-<!-- //header -->
-{% block farouk %}
-<!-- inner banner -->
-<div class="inner-banner-w3ls py-5" id="home">
-    <div class="container py-xl-5 py-lg-3">
-        <!-- register  -->
-        <div class="modal-body mt-md-2 mt-5">
-            <h3 class="title-w3 mb-5 text-center text-wh font-weight-bold">Register Now</h3>
-            <form action="#" method="post">
-                <div class="form-group">
-                    <label class="col-form-label">Username</label>
-                    <input type="text" class="form-control" placeholder="your name" name="Name" required="">
-                </div>
-                <div class="form-group">
-                    <label class="col-form-label">Email</label>
-                    <input type="email" class="form-control" placeholder="loremipsum@email.com" name="Email"
-                           required="">
-                </div>
-                <div class="form-group">
-                    <label class="col-form-label">Password</label>
-                    <input type="password" class="form-control" placeholder="*****" name="Password" required="">
-                </div>
-                <div class="form-group">
-                    <label class="col-form-label">Confirm Password</label>
-                    <input type="password" class="form-control" placeholder="*****" name="Password" required="">
-                </div>
-                <div class="sub-w3l my-3">
-                    <div class="sub-w3layouts_hub">
-                        <input type="checkbox" id="brand1" value="">
-                        <label for="brand1" class="text-li text-style-w3ls">
-                            <span></span>I Accept to the Terms & Conditions</label>
-                    </div>
-                </div>
-                <button type="submit" class="btn button-style-w3">Register</button>
-            </form>
+    <div class="container">
+        <div class="style-banner mx-auto">
+
+        {% block body %}
+            {% endblock %}
+
+            <!-- //form -->
         </div>
-        <!-- //register -->
     </div>
-</div>
-<!-- //inner banner -->
-{% endblock %}
+
+
+
 <!-- footer -->
 <footer class="py-5">
     <div class="container py-xl-4 py-lg-3">

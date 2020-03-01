@@ -157,18 +157,6 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                             </ul>
                         </li>
                         <li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-question-circle"></i>
-                                <span>Quizz</span>
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a href="{{path('AjouterQuizz')}}"><i class="fa fa-external-link"></i> Ajouter Quizz</a></li>
-                                <li><a href="{{ path('AfficherQuizz') }}"><i class="fa fa-external-link"></i> Lister Les Quizz</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="treeview">
                             <a href="charts.html">
                                 <i class="fa fa-pie-chart"></i>
                                 <span>Charts</span>
@@ -179,7 +167,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                         <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-laptop"></i>
-                                <span>Event</span>
+                                <span>UI Elements</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
@@ -517,22 +505,6 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 
 
 <!-- Bootstrap Core JavaScript -->
-<script>
-    $(document).on({
-        "contextmenu": function(e) {
-            console.log("ctx menu button:", e.which);
-
-            // Stop the context menu
-            e.preventDefault();
-        },
-        "mousedown": function(e) {
-            console.log("normal mouse down:", e.which);
-        },
-        "mouseup": function(e) {
-            console.log("normal mouse up:", e.which);
-        }
-    });
-</script>
 <script src="{{ asset('Back/js/bootstrap.js') }}"></script>
 <!-- //Bootstrap Core JavaScript -->
 </body>
